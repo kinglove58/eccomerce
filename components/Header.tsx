@@ -10,6 +10,7 @@ import SignInButton from "./SignInButton";
 import HeaderBottom from "./HeaderBottom";
 import SearchInput from "./SearchInput";
 import OrderBtn from "./OrderBtn";
+import UserLocation from "./UserLocation";
 
 const Header = async () => {
   const session = await auth();
@@ -30,13 +31,7 @@ const Header = async () => {
             </div>
           </Link>
           {/* Deliver */}
-          <div className="headerItem hidden xl:inline-flex gap-1">
-            <SlLocationPin className="text-lg text-white" />
-            <div className="text-xs">
-              <p>Deliver to</p>
-              <p className="text-white font-bold uppercase">USA</p>
-            </div>
-          </div>
+          <UserLocation />
           <SearchInput />
 
           {session?.user ? <SignOutButton /> : <SignInButton />}
