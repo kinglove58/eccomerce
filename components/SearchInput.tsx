@@ -11,6 +11,7 @@ const SearchInput = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [products, setProducts] = useState([]);
   const [isInputFocused, setIsInputFocused] = useState(false); // New state to manage input focus
+  
   const searchContainerRef = useRef<HTMLDivElement>(null); // Ref to detect clicks outside
 
   const [filteredProducts, setFilteredProducts] = useState([]);
